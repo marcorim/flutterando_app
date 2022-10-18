@@ -19,7 +19,7 @@ class WidgetCardHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
-      height: 160,
+      height: 140,
       decoration: const BoxDecoration(
         color: Color(0xFF172026),
         borderRadius: BorderRadius.all(Radius.circular(16.0)),
@@ -28,7 +28,7 @@ class WidgetCardHome extends StatelessWidget {
       child: Column(
         children: [
           Row(
-            children:  [
+            children: [
               CircleAvatar(
                 child: Image(
                   image: AssetImage(assetImage),
@@ -97,19 +97,26 @@ class WidgetCardHome extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              Container(
-                width: 119.0,
-                height: 34.5,
-                decoration: const BoxDecoration(
-                  color: Color(0xFF055AA3),
-                  borderRadius: BorderRadius.all(Radius.circular(50.0)),
-                ),
-                child: const Align(
-                  child: Text(
-                    'Ver mais',
-                    style: TextStyle(
-                      color: Color(0xFFEDF4F8),
-                      fontSize: 12.0,
+              InkWell(
+                onTap: (() {
+                  Navigator.of(context).pushNamed(
+                    '/info_pages',
+                  );
+                }),
+                child: Container(
+                  width: 119.0,
+                  height: 34.5,
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF055AA3),
+                    borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                  ),
+                  child: const Align(
+                    child: Text(
+                      'Ver mais',
+                      style: TextStyle(
+                        color: Color(0xFFEDF4F8),
+                        fontSize: 12.0,
+                      ),
                     ),
                   ),
                 ),

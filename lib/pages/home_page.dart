@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: const [
               CustomAppBar(),
-              SizedBox(height: 15.0),
+              SizedBox(height: 5.0),
               WidgetCardHome(
                 descricao:
                     'Estudos sobre animações implícitas e controladas, contendo 4 exercícios e 2 estudos',
